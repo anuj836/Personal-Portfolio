@@ -32,15 +32,7 @@ contactEmail.verify((error) => {
   }
 });
 
-// Define a GET route for the root URL
-router.get("/", (req, res) => {
-  res.send("Welcome to the Email Sending Service!");
-});
 
-// Define a GET route for the /contact URL
-router.get("/contact", (req, res) => {
-  res.send("Contact page - Please submit your message using the POST method.");
-});
 
 // Define the POST route for contact form submissions
 router.post("/contact", (req, res) => {
