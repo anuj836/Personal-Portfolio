@@ -18,8 +18,8 @@ console.log(process.env.EMAIL_PASS);
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "anujdeshmukh836@gmail.com", // Use environment variable for security
-    pass: "qnrp daht ovgs iysb", // Use environment variable for security
+    user: process.env.EMAIL_USER, // Use environment variable for security
+    pass: process.env.EMAIL_PASS, // Use environment variable for security
   },
 });
 
@@ -50,7 +50,7 @@ router.post("/contact", (req, res) => {
   
   const mail = {
     from: name,
-    to: "anujdeshmukh836@gmail.com", // Use environment variable for security
+    to: process.env.EMAIL_USER, // Use environment variable for security
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
