@@ -27,7 +27,8 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("https://personal-portfolio-backend-kfjj.onrender.com");
+    let response = await fetch("https://personal-portfolio-backend-kfjj.onrender.com", {
+      method: "POST"});
     setButtonText("Send");
     let result = await response.json();
     setFormDetails(formInitialDetails);
