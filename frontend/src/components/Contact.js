@@ -27,7 +27,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("https://personal-portfolio-backend-hzp3.onrender.com", {
+    let response = await fetch("https://personal-portfolio-backend-kfjj.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
