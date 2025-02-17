@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const frontendURL="https://personal-portfolio-frontend-0186.onrender.com/";
+fetch("https://personal-portfolio-frontend-0186.onrender.com/");
 require('dotenv').config(); // Load environment variables
 
 // Server used to send emails
