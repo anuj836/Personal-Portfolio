@@ -35,7 +35,7 @@ contactEmail.verify((error) => {
 
 
 // Define the POST route for contact form submissions
-router.post("/contact", (req, res) => {
+router.post("/", (req, res) => {
   const name = req.body.firstName + " " + req.body.lastName; // Add a space between first and last name
   const email = req.body.email;
   const message = req.body.message;
