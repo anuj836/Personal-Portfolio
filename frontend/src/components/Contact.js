@@ -29,10 +29,6 @@ export const Contact = () => {
     setButtonText("Sending...");
     let response = await fetch("https://personal-portfolio-backend-kfjj.onrender.com", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
     });
     setButtonText("Send");
     let result = await response.json();
